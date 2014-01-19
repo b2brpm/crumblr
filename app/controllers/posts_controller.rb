@@ -24,25 +24,25 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        redirect_to @post, notice: 'Post was successfully created.'
       else
-        format.html { render action: 'new' }
+        render action: 'new' 
       end
   end
 
   # PATCH/PUT /posts/1
   def update
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+         redirect_to @post, notice: 'Post was successfully updated.'
       else
-        format.html { render action: 'edit' }
+        render action: 'edit' 
       end
   end
 
   # DELETE /posts/1
   def destroy
     @post.destroy
-      format.html { redirect_to posts_url }
+      redirect_to posts_url 
   end
 
   private
@@ -53,6 +53,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :kind)
     end
 end
