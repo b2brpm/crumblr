@@ -1,5 +1,6 @@
 Crumblr::Application.routes.draw do
   resources :posts
+  resources :hearts, only: :create
 
 #  get "pages/about"
 get "about" => "pages#about"
