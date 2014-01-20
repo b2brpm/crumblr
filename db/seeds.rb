@@ -10,15 +10,15 @@ post1.title = "epic Cheese Cake"
 post1.kind = "image"
 post1.content = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTjRATucZ_PD8o3ZmGeFTby3RS6qUq-oVQ_cM6jgD71MLfYoaEH"
 post1.save
-2.times do {post1.hearts.create}
+2.times { post1.hearts.create }
 
 post2 = Post.new(title:"Ovenly", kind: "text")
 post2.content = "Drury lane bakery in Oneonta makes the best black & white cookies"
-5.times do { post2.hearts.create }
+5.times { post2.hearts.create }
 
 post3 = Post.create(
-	title: "Chocolate Chip Goodnewss"
-	kind: "image"
+	title: "Chocolate Chip Goodness",
+	kind: "image",
 	content: "http://media-cache-ak0.pinimg.com/236x/33/37/75/333775b78a9ff8701cd7e903dc9c2050.jpg")
 8.times do {post3.hearts.create}
 
