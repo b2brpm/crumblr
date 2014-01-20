@@ -19,8 +19,9 @@ post2.content = "Drury lane bakery in Oneonta makes the best black & white cooki
 post3 = Post.create(
 	title: "Chocolate Chip Goodness",
 	kind: "image",
-	content: "http://media-cache-ak0.pinimg.com/236x/33/37/75/333775b78a9ff8701cd7e903dc9c2050.jpg")
-8.times do {post3.hearts.create}
+	content: "http://media-cache-ak0.pinimg.com/236x/33/37/75/333775b78a9ff8701cd7e903dc9c2050.jpg"
+	)
+8.times { post3.hearts.create }
 
 post4 = Post.new(title: "Killer blondie Recipe", kind: "text")
 post4.content = <<CONTENT 
