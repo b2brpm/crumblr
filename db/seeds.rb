@@ -14,6 +14,7 @@ post1.save
 
 post2 = Post.new(title:"Ovenly", kind: "text")
 post2.content = "Drury lane bakery in Oneonta makes the best black & white cookies"
+post2.save
 5.times { post2.hearts.create }
 
 post3 = Post.create(
